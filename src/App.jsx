@@ -2,7 +2,7 @@ import './App.css'
 import FloorPlan from './FloorPlan'
 
 const bedNum = [1, 2, 3]
-const size = ['Half', 'Full']
+const size = ['half', 'full']
 
 function App() {
   return (

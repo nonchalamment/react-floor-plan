@@ -1,5 +1,75 @@
-div {
+.floorplan > div {
   border: 1px solid grey;
-  margin: 5px;
-  padding: 5px;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+h3 {
+  padding: 0;
+}
+
+.floorplan {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px;
+  grid-template-areas: 
+    "kitchen kitchen kitchen bedroom1 bedroom1"
+    "kitchen kitchen kitchen bedroom1 bedroom1"
+    "livingroom livingroom fullbath bedroom2 bedroom2"
+    "livingroom livingroom fullbath bedroom2 bedroom2"
+    "livingroom livingroom halfbath bedroom3 bedroom3";
+  justify-items: stretch;
+}
+
+.bedroom1, .bedroom2, .bedroom3 {
+  background-color: rgb(62, 168, 174);
+}
+
+.bedroom1 {
+  grid-area: bedroom1;
+}
+
+.bedroom2 {
+  grid-area: bedroom2;
+}
+
+.bedroom3 {
+  grid-area: bedroom3;
+}
+
+.kitchen {
+  grid-area: kitchen;
+  display: grid;
+  grid-template-columns: 20% 20% 60%;
+  grid-template-rows: 60% 20% 20%;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    "sink oven .";
+  background-color: rgb(186, 80, 176)
+}
+
+.livingroom {
+  grid-area: livingroom;
+  background-color: rgb(244, 182, 89)
+}
+
+.half-bath {
+  grid-area: halfbath;
+  background-color: rgb(199, 101, 101);
+}
+
+.full-bath{
+  grid-area: fullbath;
+  background-color: rgb(199, 101, 101);
+}
+
+.sink {
+  grid-area: sink;
+  background-color: rgb(42, 182, 37)
+}
+
+.oven {
+  grid-area: oven;
+  background-color: rgb(139, 52, 215);
 }
